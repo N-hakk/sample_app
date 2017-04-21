@@ -44,4 +44,4 @@ RSpec.describe PagesController, type: :controller do
                           "Simple App du Tutoriel Ruby on Rails | À Propos")
     end
 
-end
+  end
