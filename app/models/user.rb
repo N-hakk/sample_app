@@ -1,10 +1,10 @@
 class User < ApplicationRecord
-	  #	attr_accessor :nom, :email
-	  	#attr_accessor :password , :password_confirmation
+	  #	attr_accessor :nom, :email 
+	  	attr_accessor :password, :password_confirmation
   	#  attr_accessible :nom, :email, :password, :password_confirmation
-	  	def user_params
-	    	params.require(:user).permit(:username, :email, :password, :password_confirmation)
-	    end
+	  #	def user_params
+	   # 	params.require(:user).permit(:username, :email, :password, :password_confirmation)
+	   # end
 		email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
 		validates :nom, :presence => true,

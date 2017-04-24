@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bootstrap4</title>
-    <link href="/assets/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="/assets/bootstrap.min.css" media="screen" rel="stylesheet">
      <link href="/assets/custom.css" media="screen" rel="stylesheet">
 
     <script type="text/javascript" src="/assets/jquery-3.2.1.min.js"></script>
@@ -26,9 +26,12 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-  <%= link_to  "Sign up", signup_path, :class => "btn btn-primary btn-lg btn-block" %>
+  <%= link_to  "Sign up", signup_path, :class => "btn btn-primary btn-lg btn-block" %>      
     <div class="container">
     	<div class="panel-heading">
+            <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+            <% end %>
       		  <section class="round">
 		        <%= yield %>
 		      </section>
