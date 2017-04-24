@@ -1,3 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
-<%= @user.nom %>, <%= @user.email %>
+
+<div class="container-fluid well span6">
+	<div class="row-fluid">
+        <div class="span2" >
+		   
+            <h3> <%= gravatar_for @user %> <%= @user.nom %></h3>
+            <h3>Email : <%= @user.email %></h3>
+            <h6>URL: <%= link_to user_path(@user), @user %></h6>
+
+        </div>
+	</div>
+</div>
